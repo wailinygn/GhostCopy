@@ -1,0 +1,80 @@
+*{
+transition-property: color, background-color, border-color, background-image, padding, border-width;
+transition-duration: 1s;
+font: Pyidaungsu 11px;
+color: #06eef4;
+border-color: #06eef4;
+
+
+}
+GtkLabel, GtkButton *{
+  border-width: 0px;
+  background-color: transparent;
+}
+GtkSearchEntry {
+  background-color: #222;
+}
+
+GtkImage{
+  background: transparent;
+}
+GtkScale
+{
+  /*background: #800080;*/
+  /*background: transparent;*/
+  background-image: -gtk-gradient (linear,
+                                       left top,
+       left bottom,
+       from (#d0e4f7),
+       color-stop (0.5, darker (#800080)),
+       to (#fdffff));
+}
+GtkButton {
+    background: #222;
+    border-radius: 1px;
+    border-color: #06eef4;
+    /*box-shadow: 1px 1px 1px 1px #06eef4 inset;*/
+    margin: 5px;
+    border-width: 3px;
+    background-color: #444;
+    padding: 0px;
+}
+
+GtkNotebook {
+  background-color: #222;
+}
+GtkDrawingArea{
+  border: 1px;
+  border-color: #06eef4;
+}
+GtkToolbar {
+  background-color: transparent;
+}
+
+GtkWindow{
+	background-color: #222;
+}
+
+GtkListBoxRow GtkFrame .label:first-child {
+    background-color: #E6E6FA;
+    color: #800080;
+    font-size: 12px;
+    /*font-weight: bold;*/
+}
+
+
+
+.scrollbar{
+  border-radius: 30px;
+  border: 1px solid #444;
+  background-color: #111;
+  
+}
+
+
+.scrollbar:selected:active:focused{
+  border-radius: 30px;
+  border: 1px solid #444;
+  background-color: #111;
+}
+
