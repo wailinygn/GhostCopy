@@ -571,7 +571,7 @@ class myWindow(Player):
 		sdate = str(datetime.now())
 		self.curdirname = self.getDirNameString(sdate)
 		if destnation != "":
-			destnation = "%s/mmcopy_%s"%(destnation, self.curdirname)
+			destnation = "%s/ghostcopy_%s"%(destnation, self.curdirname)
 			if not os.path.exists(destnation):
 				os.makedirs(destnation)
 			# self.window.set_sensitive(False)
