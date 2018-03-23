@@ -178,7 +178,7 @@ class myWindow(Player):
 
 		# Save Database file
 		self.btn_export = builder.get_object("btn_export")
-		self.btn_export.connect("clicked", self.exportfor_myplayer)
+		self.btn_export.connect("clicked", self.exportfor_JSON)
 
 		# Rename file
 		self.btn_rename 		= builder.get_object("btn_rename")
@@ -327,7 +327,7 @@ class myWindow(Player):
 		dialog = Gtk.MessageDialog(self.window, 0, Gtk.MessageType.INFO,
 						Gtk.ButtonsType.OK, "About")
 		dialog.format_secondary_text(
-		"Name:\nn o t s e t\nVersion:\ntrial version 1.0\nRelease Date:\nnot set\n\nLicense:\nNot Set\n\nDeveloped by:\nWai Lin\nwailinygn@gmail.com\nhttp://www.n o t s e t.com")
+		"Name:\nGhostCopy\nVersion:\nversion 1.0(Free Edition)\nRelease Date:\nnot set\n\nLicense:\nNot Set\n\nDeveloped by:\nWailinux\nwailinygn@gmail.com\nhttp://www.n o t s e t.com")
 		dialog.run()
 		dialog.destroy()
 
@@ -471,10 +471,10 @@ class myWindow(Player):
 				dialog.destroy()
 				self.UpdateUI()
 
-	def exportfor_myplayer(self, *arg):
+	def exportfor_JSON(self, *arg):
 		location = self.txt_location.get_text()
 		if location != "":
-			result = self.mydb.exportDBtomyplayer(self.library)
+			result = self.mydb.exportDBtoJSON(self.library)
 			if result:
 				self.SAVE_STATE 	= False
 				dialog = Gtk.MessageDialog(self.window, 0, Gtk.MessageType.INFO,
@@ -1290,14 +1290,4 @@ def load_css():
 if __name__ == '__main__':
 	load_css()
 	mainwindow = myWindow()
-	# mydb 	 	= DB()
-
-	# album_entry = CategoryEntry(mainwindow,mydb.CATEGORIES_LIST)
-	
-	# response = album_entry.run()
-	# print(response)
-
-	# album_entry.destroy()
-
-
 	Gtk.main()
