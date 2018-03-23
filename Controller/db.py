@@ -140,7 +140,7 @@ class DB:
 			self.SavetoFile(moviefiles.savefilepath,save_DB)
 			return True
 
-	def exportDBtomyplayer(self, moviefiles):
+	def exportDBtoJSON(self, moviefiles):
 		if moviefiles:
 			save_DB 	= {}
 			moviesdb 	= {}
@@ -192,7 +192,7 @@ class DB:
 										'categories':tmpcategories
 				}
 
-			save_DB["myplayerdb"] = moviesdb
+			save_DB["jsondb"] = moviesdb
 			print(moviefiles.savefilepath, save_DB)
 			self.SavetoExportFile(moviefiles.exportfilepath,save_DB)
 			return True
